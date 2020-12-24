@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <TextBox x:Name="count" HorizontalAlignment="Left" Height="65" Margin="29,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="495"/>
+        <Button Content="Вычислить" HorizontalAlignment="Left" Margin="591,46,0,0" VerticalAlignment="Top" Width="135" Height="65" Click="Button_Click"/>
+        <TextBlock x:Name="result" HorizontalAlignment="Left" Margin="29,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="98" Width="697"/>
+
     </Grid>
 </Window>

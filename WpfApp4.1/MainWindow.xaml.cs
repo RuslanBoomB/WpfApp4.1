@@ -24,5 +24,29 @@ namespace WpfApp4._1
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                double[] massive = new double[int.Parse(count.Text)];
+                int peremennaya = 0;
+                Random generator = new Random();
+                for (int counter = 0; counter < massive.Length; counter++)
+                {
+                    massive[counter] = Math.Round(generator.Next(1, 51) - generator.NextDouble(), 2);
+                    result.Text += massive[counter].ToString() + "  ";
+                    if (massive[counter] > massive[0])
+                    {
+                        peremennaya++;
+                    }
+                }
+                result.Text += Environment.NewLine + peremennaya;
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+        }
     }
 }
